@@ -23,10 +23,58 @@
                 // Invalid email: Email must contain the character @.
                 // Empty password: Password must be non-empty.
                 var errorMessages="";
-                
-                
+                // var id = document.getElementsByName("id")[0].value;
+                // console.log(id);
+                // if(id.length>10){
+                //     errorMessages += "ID must be a maximum length of 10 characters \n";
+                // }
+                // var age = document.getElementsByName("age")[0].value;
+                // console.log(age);
+                // if(ageVal < 10 || ageVal>40 ){
+                //     errorMessages += "Age must be between 10 and 40 \n";
+                // }
+                // var email = document.getElementsByName("email")[0].value;
+                // console.log(email);
+                // if(!email.includes("@")){
+                //     errorMessages += "Email contains the character ‘@’ \n";
+                // }
+                // var password = document.getElementsByName("password")[0].value;
+                // console.log(password);
+                // if(password.length === 0){
+                //     errorMessages +=  "Password field must be non-empty \n";  
+                // }
+                // if(errorMessages.length !== 0){
+                //     console.log(errorMessages);
+                //     alert(errorMessages);
+
+                // }
+            
+
+            let formElem = document.forms[formName];
+            const idVal = formElem["id"].value;
+            const ageVal = formElem["age"].value;
+            const emailVal = formElem["email"].value;
+            const passwordVal = formElem["password"].value;
+            if(idVal.length > 10){
+                errorMessages+="ID must be a maximum length of 10 characters \n";
             }
-     
+            if(ageVal < 10 || ageVal>40 ){
+                errorMessages+="Age must be between 10 and 40 \n";
+            }
+            if(emailVal.indexOf("@")==-1){
+                errorMessages+="Email contains the character ‘@’ \n";
+            }
+            if(passwordVal.trim().length==0){
+                errorMessages+="Password field must be non-empty \n";  
+            }
+
+            if(errorMessages.length !== 0){
+                    // console.log(errorMessages);
+                    alert(errorMessages);
+                    return false;
+                }
+                return true;
+            }
          </script>
 </body>
 </html>
