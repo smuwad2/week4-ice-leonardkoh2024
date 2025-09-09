@@ -55,13 +55,13 @@
                 errorMessages+="ID must be a maximum length of 10 characters \n";
             }
             if(ageVal < 10 || ageVal>40 ){
-                errorMessages+="Age must be between 10 and 40 \n";
+                errorMessages+="Age must be between 10 and 40. \n";
             }
             if(emailVal.indexOf("@")==-1){
-                errorMessages+="Email contains the character ‘@’ \n";
+                errorMessages+="Email must contain the character @. \n";
             }
             if(passwordVal.trim().length==0){
-                errorMessages+="Password field must be non-empty \n";  
+                errorMessages+="Password must be non-empty. \n";  
             }
 
             if(errorMessages.length !== 0){
