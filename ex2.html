@@ -7,9 +7,16 @@
             width: 200px;
             height: 200px;
             background-color: goldenrod;
+            
         }
 
         /* add CSS code here */
+        #div2 {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+            border-radius: 50%;
+        }
         
     </style>
 
@@ -26,6 +33,13 @@
     <script>
         var square=true;
        // add code here
+       function changeShape(){
+        if(document.getElementsByTagName("div")[0].id == "div1"){
+            document.getElementById("div1").id="div2";
+        }else{
+            document.getElementById("div2").id="div1";
+        }
+       }
         
     </script>
 
